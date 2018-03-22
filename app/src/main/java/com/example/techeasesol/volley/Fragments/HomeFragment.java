@@ -88,6 +88,7 @@ public class HomeFragment extends Fragment {
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerViewAdapter = new RecyclerViewAdapter(dateStringArray);
         recyclerView.setAdapter(recyclerViewAdapter);
+        EditText editText = new EditText(getActivity());
         return view;
     }
 }
