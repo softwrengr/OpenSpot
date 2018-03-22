@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OpenSpot.iml" filepath="$PROJECT_DIR$/OpenSpot.iml" />
+      <module fileurl="file://C:\Users\ak603\Documents\GitHub\OpenSpot\OpenSpot.iml" filepath="C:\Users\ak603\Documents\GitHub\OpenSpot\OpenSpot.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\ak603\Documents\GitHub\OpenSpot\app\app.iml" filepath="C:\Users\ak603\Documents\GitHub\OpenSpot\app\app.iml" />
     </modules>
   </component>
 </project>

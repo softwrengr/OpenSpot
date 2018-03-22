@@ -140,7 +140,7 @@
                 android:text="NOON 7AM"
                 android:textSize="16dp"
                 android:layout_marginLeft="30dp"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFF" />
 
 
             <Button
