@@ -1,0 +1,21 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#eeeeee"
+    android:id="@+id/fragment_container"
+    tools:context="com.example.techeasesol.volley.Activities.FullscreenActivity">
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#009900"
+        android:layout_gravity="bottom"
+        app:itemTextColor="#fff"
+        android:isScrollContainer="false"
+        app:menu="@menu/bottom_nav_items"
+        />
+</FrameLayout>
