@@ -55,8 +55,7 @@ public class HomeFragment extends Fragment {
         btnFindSpot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment fragment = new BookingFragment();
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack("").commit();
+
             }
         });
         etSearchbar.setOnClickListener(new View.OnClickListener() {

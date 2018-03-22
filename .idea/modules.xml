@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SportApp.iml" filepath="$PROJECT_DIR$/SportApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OpenSpot.iml" filepath="$PROJECT_DIR$/OpenSpot.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
