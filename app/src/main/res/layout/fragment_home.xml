@@ -184,7 +184,7 @@
                 android:textSize="16dp"
                 android:textAllCaps="false"
                 android:layout_marginLeft="10dp"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFF" />
 
 
             <Button
