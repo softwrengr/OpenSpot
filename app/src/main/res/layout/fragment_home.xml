@@ -251,69 +251,12 @@
             android:textColor="#FFF"
             android:layout_gravity="center"/>
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/mainView"
+    <ListView
+        android:id="@+id/listview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="5dp"
-        android:background="#d7d7c1">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="6 facilities available in doha"
-            android:layout_marginLeft="30dp"
-            android:gravity="center"
-            android:textSize="16sp"
-            android:layout_marginTop="5dp"/>
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:background="#fff">
-
-            <ImageView
-                android:layout_width="320dp"
-                android:layout_height="200dp"
-                android:src="@drawable/football"
-                android:scaleType="fitXY"
-                android:padding="16dp"
-                android:layout_gravity="center"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="QATAR CLUB"
-                android:textSize="16sp"
-                android:layout_marginLeft="45dp"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:background="#fff">
-
-            <ImageView
-                android:layout_width="320dp"
-                android:layout_height="200dp"
-                android:src="@drawable/footballtwo"
-                android:scaleType="fitXY"
-                android:padding="16dp"
-                android:layout_gravity="center"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="SPORT CLUB"
-                android:textSize="16sp"
-                android:layout_marginLeft="45dp"
-                />
-        </LinearLayout>
-    </LinearLayout>
+    </ListView>
 
     </LinearLayout>
 
