@@ -27,6 +27,7 @@ import com.example.techeasesol.volley.Adapter.RecyclerViewAdapter;
 import com.example.techeasesol.volley.Models.GroundDetailModel;
 import com.example.techeasesol.volley.R;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -37,6 +38,7 @@ import java.util.GregorianCalendar;
 
 public class HomeFragment extends Fragment {
     EditText etSearchbar;
+    Button btnSpot;
     boolean check = false;
     RecyclerView recyclerView;
     RecyclerViewAdapter recyclerViewAdapter;
@@ -56,6 +58,7 @@ public class HomeFragment extends Fragment {
         listView = view.findViewById(R.id.listview);
         bottomView = view.findViewById(R.id.bottomView);
         mainView = view.findViewById(R.id.mainView);
+        btnSpot = view.findViewById(R.id.findSpot);
 
         groundDetailModel = new ArrayList<>();
         serverResponse();
@@ -89,32 +92,47 @@ public class HomeFragment extends Fragment {
         recyclerViewAdapter = new RecyclerViewAdapter(dateStringArray);
         recyclerView.setAdapter(recyclerViewAdapter);
 
+        btnSpot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragment = new FindSpotFragment();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack("").commit();
+            }
+        });
+
         return view;
     }
 
     public void serverResponse() {
         String url = "http://openspot.qa/openspot/grounds";
-        final RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         final StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.d("zma response", response);
                 try {
                     JSONObject jsonObject = new JSONObject(response);
-                        JSONObject object = jsonObject.getJSONObject("ground");
-                        GroundDetailModel groundDetail = new GroundDetailModel();
-                        groundDetail.setName(object.getString("name"));
-                        groundDetail.setInformation(object.getString("information"));
-                        groundDetailModel.add(groundDetail);
-                        groundAdapter.notifyDataSetChanged();
+                    JSONArray jsonArray = jsonObject.getJSONArray("data");
+                     for(int i =0;i<jsonArray.length();i++){
+                         JSONObject object = jsonArray.getJSONObject(i);
+                         GroundDetailModel groundDetail = new GroundDetailModel();
+                         groundDetail.setName(object.getString("name"));
+                         groundDetail.setLocation(object.getString("location"));
+                         groundDetail.setInformation(object.getString("information"));
+                         groundDetailModel.add(groundDetail);
+                     }
+
+                     groundAdapter.notifyDataSetChanged();
+
 
                 } catch (JSONException e) {
                     e.printStackTrace();
+                    Log.d("zma error", String.valueOf(e.getCause()));
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                Log.d("zma error", String.valueOf(error.getCause()));
 
             }
         }) {
