@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#fff"
+    android:background="#ccccb3"
     tools:context="com.example.techeasesol.volley.Fragments.FindSpotFragment">
 
    <LinearLayout
@@ -16,8 +16,47 @@
            android:layout_height="340dp"
            android:layout_gravity="center"
            android:background="#f2f2f2"
-           android:layout_marginTop="10dp"
+           android:layout_marginTop="20dp"
            android:padding="16dp"/>
 
+       <Button
+           android:id="@+id/booknow"
+           android:layout_width="150dp"
+           android:layout_height="wrap_content"
+           android:text="book now"
+           android:textColor="#fff"
+           android:layout_gravity="center"
+           android:background="@drawable/button_shape"
+           android:layout_marginTop="40dp"/>
+       <LinearLayout
+           android:id="@+id/social_login"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:gravity="center"
+           android:visibility="gone"
+           android:layout_marginTop="10dp">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Connect with OPENSPOT\n\t\t\t\tto see our Book"/>
+           <Button
+               android:layout_width="200dp"
+               android:layout_height="wrap_content"
+               android:text="connect with facebook"
+               android:textColor="#fff"
+               android:background="@drawable/fb_button"/>
+
+           <Button
+               android:layout_width="200dp"
+               android:layout_height="wrap_content"
+               android:text="connect with email"
+               android:textColor="#fff"
+               android:layout_marginTop="10dp"
+               android:background="@drawable/button_shape"/>
+       </LinearLayout>
    </LinearLayout>
+
+
 </FrameLayout>

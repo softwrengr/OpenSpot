@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -115,6 +116,8 @@ public class HomeFragment extends Fragment {
                      for(int i =0;i<jsonArray.length();i++){
                          JSONObject object = jsonArray.getJSONObject(i);
                          GroundDetailModel groundDetail = new GroundDetailModel();
+                         groundDetail.setId(object.getString("id"));
+                         groundDetail.setImage(object.getString("image"));
                          groundDetail.setName(object.getString("name"));
                          groundDetail.setLocation(object.getString("location"));
                          groundDetail.setInformation(object.getString("information"));

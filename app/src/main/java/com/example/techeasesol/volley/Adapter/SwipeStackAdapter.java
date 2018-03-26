@@ -8,9 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import com.example.techeasesol.volley.R;
 import java.util.List;
-/**
- * Created by ak603 on 3/23/2018.
- */
+
 public class SwipeStackAdapter extends BaseAdapter {
     private List<String> mData;
     Context context;
@@ -32,7 +30,6 @@ public class SwipeStackAdapter extends BaseAdapter {
     public long getItemId(int position) {
         return position;
     }
-
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_layout, parent, false);

@@ -15,9 +15,7 @@ public class GroundDetailModel {
  String image;
  String type;
  String is_fav;
-
-
-
+ String id;
 
     public String getName() {
         return name;
@@ -65,5 +63,13 @@ public class GroundDetailModel {
 
     public void setIs_fav(String is_fav) {
         this.is_fav = is_fav;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
