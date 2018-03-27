@@ -60,11 +60,6 @@ public class GroundAdapter extends BaseAdapter {
         viewHolder.location = view.findViewById(R.id.location);
         viewHolder.information = view.findViewById(R.id.information);
         Glide.with(context).load(model.getImage()).into(viewHolder.imageView);
-        String id = model.getId();
-        Bundle bundle = new Bundle();
-        bundle.putString("id",id);
-        Fragment myid = new GroundDetailsFragment();
-        myid.setArguments(bundle);
         viewHolder.name.setText(model.getName());
         viewHolder.location.setText(model.getLocation());
         viewHolder.information.setText(model.getInformation());
@@ -72,8 +67,13 @@ public class GroundAdapter extends BaseAdapter {
         viewHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String id = model.getId();
+                Bundle bundle = new Bundle();
+                bundle.putString("zmaid",id);
                 Fragment fragment = new GroundDetailsFragment();
+                fragment.setArguments(bundle);
                 ((AppCompatActivity)context).getFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack("").commit();
+
             }
         });
         return view;

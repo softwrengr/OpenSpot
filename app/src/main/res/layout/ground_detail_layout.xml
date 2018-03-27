@@ -95,7 +95,7 @@
                     android:text="6:30"
                     android:textSize="15dp"
                     android:textColor="#FFFFFF"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="10dp"
                     android:background="@drawable/backbtn_shape"/>
 
                 <Button
@@ -104,7 +104,7 @@
                     android:text="6:30"
                     android:textSize="15dp"
                     android:textColor="#FFFFFF"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="10dp"
                     android:background="@drawable/backbtn_shape"/>
                 <Button
                     android:layout_width="65dp"
@@ -112,7 +112,7 @@
                     android:text="6:30"
                     android:textSize="15dp"
                     android:textColor="#FFFFFF"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="10dp"
                     android:background="@drawable/backbtn_shape"/>
             </LinearLayout>
 

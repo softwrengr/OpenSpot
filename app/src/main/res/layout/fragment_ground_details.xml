@@ -3,11 +3,136 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.techeasesol.volley.Fragments.GroundDetailsFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:background="#fff">
 
+            <ImageView
+                android:id="@+id/stadium_image"
+                android:layout_width="320dp"
+                android:layout_height="200dp"
+                android:src="@drawable/football"
+                android:scaleType="fitXY"
+                android:padding="16dp"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stadium"
+                        android:textSize="12sp"
+                        android:layout_marginRight="10dp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/stadium_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="QATAR CLUB"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="20dp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/favorite"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADD TO\n FAVORITE"
+                        android:gravity="center"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/location"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Information:"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="55dp"
+                    />
+                <TextView
+                    android:id="@+id/information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QATAR\n CLUB"
+                    android:textSize="12sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="#eee">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today Evening Football"
+                    android:textSize="20sp"
+                    android:layout_marginRight="5dp"/>
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:textSize="10sp"
+                    android:text="Changes"
+                    android:textColor="#fff"
+                    android:background="@drawable/button_shape"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+            <ListView
+                android:id="@+id/time_listview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></ListView>
+
+        </LinearLayout>
+    </LinearLayout>
 </FrameLayout>
